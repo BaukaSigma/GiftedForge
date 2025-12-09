@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать проект - TalentSphere</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="dashboard-fixes.css">
+    <link rel="stylesheet" href="create-project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="dashboard-page">
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileSidebarToggle">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+    </button>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar glass-effect" id="dashboardSidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <div class="logo-icon neon-glow-purple"></div>
+                <span class="logo-text">TalentSphere</span>
+            </a>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="7" height="9" x="3" y="3" rx="1" />
+                    <rect width="7" height="5" x="14" y="3" rx="1" />
+                    <rect width="7" height="9" x="14" y="12" rx="1" />
+                    <rect width="7" height="5" x="3" y="16" rx="1" />
+                </svg>
+                <span>Дашборд</span>
+            </a>
+            <a href="find-executors.html" class="nav-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <span>Поиск исполнителей</span>
+            </a>
+            <a href="#" class="nav-item active">
+                <div class="icon-glow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 5v14M5 12h14" />
+                    </svg>
+                </div>
+                <span>Создать проект</span>
+            </a>
+            <a href="marketplace.html" class="nav-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                </svg>
+                <span>Проекты</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                </svg>
+                <span>Профиль</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-user">
+            <div class="user-avatar-small">AD</div>
+            <div class="user-info-small">
+                <span class="user-name">Alex Design</span>
+                <span class="user-role">Pro Member</span>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="create-project-header">
+            <h1 class="page-title">Создать <span class="gradient-text">проект</span></h1>
+            <p class="page-subtitle">AI поможет превратить вашу идею в готовое ТЗ</p>
+        </header>
+
+        <div class="create-project-container glass-card">
+            <!-- Step 1 Content (Only Step) -->
+            <div class="step-content">
+                <div class="form-header-row">
+                    <h2 class="section-title">Опишите вашу идею</h2>
+                    <button class="btn-ai-assist neon-button-small">
+                        <i class="fas fa-magic"></i> AI-помощник
+                    </button>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Название или краткое описание</label>
+                    <input type="text" class="form-input" placeholder="Например: Маркетплейс для аренды техники">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Детальное описание</label>
+                    <textarea class="form-textarea" rows="8"
+                        placeholder="Опишите цели, функционал, целевую аудиторию..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Файлы (опционально)</label>
+                    <div class="file-upload-simple">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <span>Прикрепить файлы</span>
+                    </div>
+                </div>
+
+                <div class="form-actions-row">
+                    <button class="btn-secondary" onclick="window.location.href='dashboard.html'">Отмена</button>
+                    <button class="btn-primary neon-button">Сгенерировать ТЗ <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Sidebar Toggle Logic
+        const mobileBtn = document.getElementById('mobileSidebarToggle');
+        const sidebar = document.getElementById('dashboardSidebar');
+        const overlay = document.getElementById('sidebarOverlay');
+
+        if (mobileBtn && sidebar && overlay) {
+            mobileBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+                overlay.classList.toggle('active');
+            });
+
+            overlay.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+/* Layout Fixes: Spacing and Backgrounds */
+
+/* 1. Remove background gradient/transition specific to the Marketplace CTA area */
+.marketplace-preview-section,
+.marketplace-cta {
+    background: #0f172a !important;
+    /* Forces solid dark color to cover any underlying gradients */
+    background-image: none !important;
+    position: relative;
+    z-index: 2;
+    /* Ensures it sits on top of any hero gradients */
+}
+
+/* 2. Increase Side Spacing for Content */
+.container,
+.hero-container,
+.video-gallery-container,
+.reviews-section .container,
+.how-it-works-section .container {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* 3. Hero Stats Transition Fix */
+.hero {
+    padding-bottom: 120px !important;
+    /* Push the bottom boundary down significantly */
+    position: relative;
+    z-index: 1;
+}
+
+/* Optional: Make stats float visually if needed, but padding usually solves "tight" look */
+.hero-stats {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 0;
+}
+
+/* 4. Video Gallery Alignment & Sizing */
+.video-gallery-container {
+    align-items: center !important;
+    /* Center vertically */
+    grid-template-columns: 2.2fr 1fr !important;
+    /* Increase main video size relative to list */
+}
+
+/* Ensure mobile responsiveness respects these paddings */
+@media (max-width: 768px) {
+
+    .container,
+    .hero-container,
+    .video-gallery-container,
+    .section-header,
+    .steps-grid,
+    .marketplace-preview-grid {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+    .hero {
+        padding-bottom: 60px !important;
+        /* Less padding on mobile */
+    }
+
+    .video-gallery-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Video gallery specific fix if it was full width */
+    .video-gallery-container {
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+}
+
+/* Fix for specific cards being too close to edge */
+.review-card,
+.benefit-card,
+.step-card,
+.project-card,
+.preview-card,
+.video-thumbnail-item {
+    margin-left: 0;
+    margin-right: 0;
+    /* Ensure no negative margins pulling them out */
+}

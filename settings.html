@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройки - TalentSphere</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="dashboard-fixes.css">
+    <link rel="stylesheet" href="global-header.css">
+    <link rel="stylesheet" href="settings.css">
+    <!-- Production: use ~/ paths -->
+    <!-- ВАЖНО: mobile-header.css должен быть ПОСЛЕДНИМ -->
+    <link rel="stylesheet" href="mobile-header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="dashboard-page">
+
+    <div class="mobile-header">
+        <button class="mobile-menu-btn" id="mobileSidebarToggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <span class="mobile-logo-text">TalentSphere</span>
+        <div class="mobile-avatar"></div>
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar glass-effect" id="dashboardSidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <div class="logo-icon neon-glow-purple"></div>
+                <span class="logo-text">TalentSphere</span>
+            </a>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="7" height="9" x="3" y="3" rx="1" />
+                    <rect width="7" height="5" x="14" y="3" rx="1" />
+                    <rect width="7" height="9" x="14" y="12" rx="1" />
+                    <rect width="7" height="5" x="3" y="16" rx="1" />
+                </svg>
+                <span>Дашборд</span>
+            </a>
+            <a href="find-executors.html" class="nav-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <span>Поиск исполнителей</span>
+            </a>
+            <a href="team-project.html" class="nav-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <span>Командный проект</span>
+            </a>
+            <a href="marketplace.html" class="nav-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                </svg>
+                <span>Проекты</span>
+            </a>
+            <a href="my-work.html" class="nav-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Управление работой</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                </svg>
+                <span>Профиль</span>
+            </a>
+            <a href="wallet.html" class="nav-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" />
+                    <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" />
+                </svg>
+                <span>Кошелек</span>
+            </a>
+            <a href="messages.html" class="nav-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg>
+                <span>Сообщения</span>
+                <span class="badge neon-glow-pink">3</span>
+            </a>
+            <a href="education.html" class="nav-item">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" />
+                    <path d="M22 10v6" />
+                    <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+                </svg>
+                <span>Обучение</span>
+            </a>
+            <a href="settings.html" class="nav-item active">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1-1-1.72v-.51a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+                    <circle cx="12" cy="12" r="3" />
+                </svg>
+                <span>Настройки</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-profile glass-card">
+                <div class="user-avatar neon-glow-blue"></div>
+                <div class="user-info">
+                    <div class="user-name">Alex Design</div>
+                    <div class="user-status">Pro Member</div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <!-- Ambient Glows -->
+        <div class="settings-glow glow-1"></div>
+        <div class="settings-glow glow-2"></div>
+
+        <header class="content-header">
+            <h1 class="page-title">Настройки <span class="gradient-text">аккаунта</span></h1>
+        </header>
+
+
+
+        <div class="settings-content">
+            <!-- Профиль -->
+            <section class="settings-section glass-card">
+                <div class="section-header">
+                    <div class="section-icon neon-glow-blue">👤</div>
+                    <div>
+                        <h2 class="section-title">Основная информация</h2>
+                        <p class="section-description">Управляйте своими личными данными</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <circle cx="10" cy="7" r="3" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        Имя
+                    </label>
+                    <input type="text" class="form-input glass-card" value="Alex Designer">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <rect x="3" y="5" width="14" height="10" rx="2" stroke="currentColor" stroke-width="2" />
+                            <path d="M3 7L10 11L17 7" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        Email
+                    </label>
+                    <input type="email" class="form-input glass-card" value="alex@example.com">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <rect x="5" y="3" width="10" height="14" rx="2" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        Телефон
+                    </label>
+                    <input type="tel" class="form-input glass-card" value="+7 999 123 45 67">
+                </div>
+                <button class="btn-primary neon-button">
+                    <span>Сохранить изменения</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M16 10L10 16M16 10L10 4M16 10H4" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </button>
+            </section>
+
+            <!-- Безопасность -->
+            <section class="settings-section glass-card">
+                <div class="section-header">
+                    <div class="section-icon neon-glow-pink">🔒</div>
+                    <div>
+                        <h2 class="section-title">Безопасность</h2>
+                        <p class="section-description">Защитите свой аккаунт</p>
+                    </div>
+                </div>
+                <div class="security-option">
+                    <div class="option-info">
+                        <h4>Двухфакторная аутентификация</h4>
+                        <p>Дополнительный уровень защиты вашего аккаунта</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="security-option">
+                    <div class="option-info">
+                        <h4>Уведомления о входе</h4>
+                        <p>Получайте уведомления о новых входах</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <button class="btn-secondary glass-card" style="margin-top: 20px;">Изменить пароль</button>
+            </section>
+
+            <!-- Уведомления -->
+            <section class="settings-section glass-card">
+                <div class="section-header">
+                    <div class="section-icon neon-glow-purple">🔔</div>
+                    <div>
+                        <h2 class="section-title">Уведомления</h2>
+                        <p class="section-description">Управляйте уведомлениями</p>
+                    </div>
+                </div>
+                <div class="security-option">
+                    <div class="option-info">
+                        <h4>Новые проекты</h4>
+                        <p>Уведомления о подходящих проектах</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="security-option">
+                    <div class="option-info">
+                        <h4>Сообщения</h4>
+                        <p>Уведомления о новых сообщениях</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="security-option">
+                    <div class="option-info">
+                        <h4>Email рассылка</h4>
+                        <p>Новости и обновления платформы</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox">
+
+                        <script src="script.js"></script>
+</body>
+
+</html>

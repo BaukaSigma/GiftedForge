@@ -1,0 +1,14 @@
+/* Fix: Remove visual lines/borders between sections */
+.marketplace-preview-section::after,
+.how-it-works-section::before {
+    display: none !important;
+}
+
+.marketplace-preview-section {
+    border-bottom: none;
+}
+
+.how-it-works-section {
+    border-top: none;
+    margin-top: 0;
+}

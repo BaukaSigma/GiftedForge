@@ -1,0 +1,43 @@
+/* Global Background Fix - Solid Color Everywhere */
+body,
+html {
+    background-color: #0f172a !important;
+    background-image: none !important;
+}
+
+/* Reset all section backgrounds to match body or be transparent */
+section,
+header,
+footer,
+.hero,
+.marketplace-preview-section,
+.how-it-works-section,
+.footer-redesign,
+.navbar,
+.mobile-menu-btn {
+    background-color: #0f172a !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    /* Remove shadows that might look like gradients */
+}
+
+/* Ensure glass effects still work but don't change base color too much */
+.glass-effect,
+.glass-card,
+.glass-card-large {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    /* Very subtle lightness */
+    box-shadow: none !important;
+}
+
+/* Specific fix for footer overlay */
+.footer-redesign {
+    border-top: none !important;
+}
+
+/* Remove any potential gradient overlays */
+.hero-bg-gradient,
+.hero::before,
+.hero::after {
+    display: none !important;
+}
