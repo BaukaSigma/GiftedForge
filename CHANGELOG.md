@@ -1,4 +1,5 @@
-# TalentSphere - Changelog
+# GiftedForge - Changelog
+
 
 ## 2025-11-20 - Frontend Optimization & Refactoring
 
@@ -71,7 +72,7 @@
 
 ### 📁 File Structure
 ```
-TalentSphere/
+GiftedForge/
 ├── sample/
 │   ├── README.md
 │   ├── messages_sample.html

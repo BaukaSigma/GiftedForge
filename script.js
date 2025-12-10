@@ -1,4 +1,4 @@
-// TalentSphere - Interactive JavaScript
+// GiftedForge - Interactive JavaScript
 
 // Skeleton Loading Helper
 function showSkeletonLoader(container, count = 3) {
@@ -460,7 +460,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Console welcome message
-    console.log('%c🚀 TalentSphere Platform', 'color: #b000ff; font-size: 24px; font-weight: bold;');
+    console.log('%c🚀 GiftedForge Platform', 'color: #b000ff; font-size: 24px; font-weight: bold;');
     console.log('%cНео-Brutalism + Glassmorphism + Cyber Neon Design', 'color: #00d4ff; font-size: 14px;');
     console.log('%cФриланс платформа будущего', 'color: #ff0080; font-size: 12px;');
 });

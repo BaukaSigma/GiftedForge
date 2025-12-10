@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Карта сайта - TalentSphere</title>
+    <title>Карта сайта - GiftedForge</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         .sitemap-container {
             max-width: 1400px;
             margin: 120px auto;
             padding: 0 32px;
         }
+
         .sitemap-header {
             text-align: center;
             margin-bottom: 64px;
         }
+
         .sitemap-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 24px;
         }
+
         .sitemap-section {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             padding: 32px;
         }
+
         .section-title {
             font-size: 24px;
             font-weight: 700;
@@ -35,6 +42,7 @@
             align-items: center;
             gap: 12px;
         }
+
         .page-link {
             display: flex;
             align-items: center;
@@ -47,13 +55,16 @@
             color: var(--text-primary);
             transition: all 0.3s ease;
         }
+
         .page-link:hover {
             background: rgba(255, 255, 255, 0.08);
             transform: translateX(8px);
         }
+
         .page-icon {
             font-size: 20px;
         }
+
         .badge {
             font-size: 10px;
             padding: 4px 8px;
@@ -63,12 +74,13 @@
         }
     </style>
 </head>
+
 <body class="landing-page">
     <nav class="main-nav glass-effect">
         <div class="nav-container">
             <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
                 <div class="logo-icon neon-glow-purple"></div>
-                <span class="logo-text">TalentSphere</span>
+                <span class="logo-text">GiftedForge</span>
             </a>
             <div class="nav-actions">
                 <a href="index.html" class="btn-primary neon-button">← На главную</a>
@@ -78,10 +90,11 @@
 
     <div class="sitemap-container">
         <div class="sitemap-header">
-            <h1 style="font-size: 56px; font-weight: 800; margin-bottom: 16px; font-family: 'Space Grotesk', sans-serif;">
+            <h1
+                style="font-size: 56px; font-weight: 800; margin-bottom: 16px; font-family: 'Space Grotesk', sans-serif;">
                 Все <span class="gradient-text">страницы</span> платформы
             </h1>
-            <p style="font-size: 18px; color: var(--text-secondary);">Полная навигация по 20 страницам TalentSphere</p>
+            <p style="font-size: 18px; color: var(--text-secondary);">Полная навигация по 20 страницам GiftedForge</p>
         </div>
 
         <div class="sitemap-grid">
@@ -217,20 +230,35 @@
 
         <!-- Summary -->
         <div class="glass-card-large" style="margin-top: 64px; padding: 48px; text-align: center;">
-            <h2 style="font-size: 36px; font-weight: 800; margin-bottom: 16px; font-family: 'Space Grotesk', sans-serif;">
+            <h2
+                style="font-size: 36px; font-weight: 800; margin-bottom: 16px; font-family: 'Space Grotesk', sans-serif;">
                 📊 Всего: 20+ страниц
             </h2>
             <p style="font-size: 18px; color: var(--text-secondary); margin-bottom: 32px;">
                 Полноценная платформа с профессиональным дизайном и всем необходимым функционалом
             </p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; max-width: 800px; margin: 0 auto;">
-                <div><div style="font-size: 32px; font-weight: 800; color: var(--primary-blue); margin-bottom: 4px;">8</div><div style="color: var(--text-secondary); font-size: 14px;">Основных</div></div>
-                <div><div style="font-size: 32px; font-weight: 800; color: var(--primary-pink); margin-bottom: 4px;">12</div><div style="color: var(--text-secondary); font-size: 14px;">Новых</div></div>
-                <div><div style="font-size: 32px; font-weight: 800; color: var(--primary-purple); margin-bottom: 4px;">100%</div><div style="color: var(--text-secondary); font-size: 14px;">Готовность</div></div>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; max-width: 800px; margin: 0 auto;">
+                <div>
+                    <div style="font-size: 32px; font-weight: 800; color: var(--primary-blue); margin-bottom: 4px;">8
+                    </div>
+                    <div style="color: var(--text-secondary); font-size: 14px;">Основных</div>
+                </div>
+                <div>
+                    <div style="font-size: 32px; font-weight: 800; color: var(--primary-pink); margin-bottom: 4px;">12
+                    </div>
+                    <div style="color: var(--text-secondary); font-size: 14px;">Новых</div>
+                </div>
+                <div>
+                    <div style="font-size: 32px; font-weight: 800; color: var(--primary-purple); margin-bottom: 4px;">
+                        100%</div>
+                    <div style="color: var(--text-secondary); font-size: 14px;">Готовность</div>
+                </div>
             </div>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
