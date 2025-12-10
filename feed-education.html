@@ -71,7 +71,7 @@
                         class="user-avatar">
                 </div>
 
-                <button class="icon-btn burger-btn" onclick="toggleMobileMenu()">
+                <button class="icon-btn burger-btn">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round">
                         <line x1="3" y1="12" x2="21" y2="12" />
@@ -518,7 +518,7 @@
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-header">
             <h3>Меню</h3>
-            <button class="icon-btn close-menu-btn" onclick="toggleMobileMenu()">
+            <button class="icon-btn close-menu-btn">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18" />
@@ -625,13 +625,92 @@
         </div>
     </div>
 
+    <!-- Mobile Menu Fix - Inline Script -->
     <script>
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('active');
-            document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+        console.log('🍔 Feed page mobile menu script loaded');
+
+        // Wait for DOM to be ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initMobileMenu);
+        } else {
+            initMobileMenu();
         }
 
+        function initMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const burgerBtn = document.querySelector('.burger-btn');
+            const closeBtn = document.querySelector('.close-menu-btn');
+
+            console.log('Mobile menu elements:', {
+                mobileMenu: mobileMenu,
+                burgerBtn: burgerBtn,
+                closeBtn: closeBtn,
+                menuExists: !!mobileMenu,
+                btnExists: !!burgerBtn,
+                closeBtnExists: !!closeBtn
+            });
+
+            if (!mobileMenu || !burgerBtn) {
+                console.error('❌ Mobile menu elements not found in feed-education.html!');
+                if (!mobileMenu) console.error('Missing: #mobileMenu');
+                if (!burgerBtn) console.error('Missing: .burger-btn');
+                return;
+            }
+
+            console.log('✅ Mobile menu elements found, attaching click handler');
+
+            burgerBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('🎯 BURGER MENU CLICKED in feed-education.html!');
+
+                const isActive = mobileMenu.classList.contains('active');
+                console.log('Current menu state:', isActive ? 'open' : 'closed');
+
+                // Toggle menu
+                mobileMenu.classList.toggle('active');
+
+                // Toggle body scroll
+                if (!isActive) {
+                    document.body.style.overflow = 'hidden';
+                    console.log('📱 Mobile menu opened');
+                } else {
+                    document.body.style.overflow = '';
+                    console.log('📱 Mobile menu closed');
+                }
+            });
+
+            // Close button click handler
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function () {
+                    console.log('❌ Close button clicked');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+
+            // Close menu when clicking nav links
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            console.log(`Found ${menuLinks.length} menu links`);
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                    console.log('Menu link clicked, menu closed');
+                });
+            });
+
+            // Close menu on resize to desktop
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                    console.log('Resized to desktop, menu closed');
+                }
+            });
+
+            console.log('✅ Feed page mobile menu initialized successfully');
+        }
     </script>
 
 </body>
