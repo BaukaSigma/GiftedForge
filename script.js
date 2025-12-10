@@ -45,8 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
 
+    console.log('Mobile Menu Debug:', { mobileMenuToggle, mobileMenu });
+
     if (mobileMenuToggle && mobileMenu) {
+        console.log('Mobile menu elements found, adding click listener');
+
         mobileMenuToggle.addEventListener('click', () => {
+            console.log('Mobile menu toggle clicked!');
             mobileMenuToggle.classList.toggle('active');
             mobileMenu.classList.toggle('active');
             document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
@@ -69,6 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.style.overflow = '';
             }
         });
+    } else {
+        console.error('Mobile menu elements not found!', { mobileMenuToggle, mobileMenu });
     }
 
     // Smooth scroll for anchor links
